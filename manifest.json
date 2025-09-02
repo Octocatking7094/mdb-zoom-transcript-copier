@@ -1,0 +1,19 @@
+{  
+  "manifest_version": 3,  
+  "name": "Zoom Transcript Copier",  
+  "version": "1.0",  
+  "description": "Copy Zoom audio transcript to clipboard",  
+  "permissions": [  
+    "clipboardWrite"  
+  ],  
+  "host_permissions": [  
+    "https://zoom.us/rec/*",  
+    "https://*.zoom.us/rec/*"  
+  ],  
+  "content_scripts": [  
+    {  
+      "matches": ["https://*.zoom.us/rec/*"],  
+      "js": ["content.js"]  
+    }  
+  ]  
+}  
